@@ -23,7 +23,7 @@ class Comment(models.Model):
     email = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.nome
+        return self.name
     
 class Post(models.Model):
     userId = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -31,4 +31,4 @@ class Post(models.Model):
     body = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.nome
+        return self.title
